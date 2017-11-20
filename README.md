@@ -10,6 +10,8 @@ The WebGL backend is powered by weblas: https://github.com/waylonflinn/weblas.
 
 A weiqi (baduk, go) policy network in AlphaGo style:
 
+<img width="500" alt="performance_image" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
+
     const N = 19;
     const NN = N * N;
     const nFeaturePlane = 8;
@@ -19,6 +21,8 @@ A weiqi (baduk, go) policy network in AlphaGo style:
     x.Init('weblas');
     x.nChannel = nFeaturePlane;
     x.data = new Float32Array(nFeaturePlane * NN);
+    for (var i = 0; i < NN; i++)
+        x.data[5 * NN + i] = 1; // set feature plane for empty board
     
     // pre-act residual network with 6 residual blocks
     const bak = new Float32Array(nFilter * NN);
