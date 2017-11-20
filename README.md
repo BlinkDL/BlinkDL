@@ -4,6 +4,8 @@ A minimalist deep learning library in Javascript using WebGL + asm.js. Runs in y
 
 Currently it is a proof-of-concept (inference only).
 
+The WebGL backend is powered by weblas: https://github.com/waylonflinn/weblas.
+
 ## Example
 
 A weiqi (baduk, go) policy network in AlphaGo style:
@@ -14,7 +16,7 @@ A weiqi (baduk, go) policy network in AlphaGo style:
     const nFilter = 128;
 
     const x = new BlinkArray();
-    x.Init('weblas'); // WebGL backend, from https://github.com/waylonflinn/weblas
+    x.Init('weblas');
     x.nChannel = nFeaturePlane;
     x.data = new Float32Array(nFeaturePlane * NN);
     
@@ -47,3 +49,12 @@ A weiqi (baduk, go) policy network in AlphaGo style:
     <script src='weblas.js' type='text/javascript'></script>
     <script src='BlinkDL.js' type='text/javascript'></script>
  
+## Todo
+- [x] Convolution (3x3_pad_1 and 1x1), BatchNorm, ReLU, Softmax
+- [ ] Webworker and async
+- [ ] Faster inference with weblas pipeline, WebGPU, WebAssembly
+- [ ] Pooling layer
+- [ ] FC layer
+- [ ] Strided convolution
+- [ ] Transposed convolution
+- [ ] Training
