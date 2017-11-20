@@ -2,15 +2,18 @@
 
 A minimalist deep learning library in Javascript using WebGL + asm.js. Runs in your browser. 
 
-Currently it is a proof-of-concept (inference only).
+Currently it is a proof-of-concept (inference only). Note: Convolution is buggy when memories overlap.
 
 The WebGL backend is powered by weblas: https://github.com/waylonflinn/weblas.
 
 ## Example
 
-A weiqi (baduk, go) policy network in AlphaGo style:
+https://withablink.coding.me/goPolicyNet/ : a weiqi (baduk, go) policy network in AlphaGo style:
 
-<img width="500" alt="performance_image" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
+<img alt="board_image" src="https://user-images.githubusercontent.com/33809201/33018072-db52dd4e-ce2f-11e7-84e7-c20428e2ba8b.png">
+
+
+<img alt="performance_image" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
 
     const N = 19;
     const NN = N * N;
@@ -61,4 +64,5 @@ A weiqi (baduk, go) policy network in AlphaGo style:
 - [ ] FC layer
 - [ ] Strided convolution
 - [ ] Transposed convolution
+- [ ] Memory manager
 - [ ] Training
