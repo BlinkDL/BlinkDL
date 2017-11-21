@@ -10,7 +10,7 @@ The WebGL backend is powered by weblas: https://github.com/waylonflinn/weblas.
 
 https://withablink.coding.me/goPolicyNet/ : a weiqi (baduk, go) policy network in AlphaGo style:
 
-<img alt="board_image" src="https://user-images.githubusercontent.com/33809201/33018072-db52dd4e-ce2f-11e7-84e7-c20428e2ba8b.png">
+<img alt="board_image" width="600" src="https://user-images.githubusercontent.com/33809201/33018072-db52dd4e-ce2f-11e7-84e7-c20428e2ba8b.png">
 
     const N = 19;
     const NN = N * N;
@@ -48,7 +48,7 @@ https://withablink.coding.me/goPolicyNet/ : a weiqi (baduk, go) policy network i
     x.Add(bak);
     x.BatchNorm().ReLU().Convolution(1, 1).Softmax();
 
-<img alt="performance_image" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
+<img alt="performance_image" width="600" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
     
 ## Usage
 
