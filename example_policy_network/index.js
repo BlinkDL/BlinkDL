@@ -64,7 +64,13 @@ function runNetwork(backend) {
     const t_end = new Date().getTime();
 
     // debug output
-    document.getElementById("debug").innerHTML += 'Backend: ' + backend + ', t = ' + ((t_end - t_start) * 0.001).toFixed(2) + 's';
+
+    var checksum = 0;
+    for (var i = 0; i < x.data.length; i++) {
+        checksum += x.data[i] * x.data[i];
+    }
+
+    document.getElementById("debug").innerHTML += 'Backend: ' + backend + ', t = ' + ((t_end - t_start) * 0.001).toFixed(2) + 's, checksum = ' + checksum;
     for (var i = 0; i < N; i++) {
         document.getElementById("debug").innerHTML += '<br />';
         for (var j = 0; j < N; j++) {
