@@ -12,9 +12,6 @@ https://withablink.coding.me/goPolicyNet/ : a weiqi (baduk, go) policy network i
 
 <img alt="board_image" src="https://user-images.githubusercontent.com/33809201/33018072-db52dd4e-ce2f-11e7-84e7-c20428e2ba8b.png">
 
-
-<img alt="performance_image" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
-
     const N = 19;
     const NN = N * N;
     const nFeaturePlane = 8;
@@ -50,6 +47,8 @@ https://withablink.coding.me/goPolicyNet/ : a weiqi (baduk, go) policy network i
     x.BatchNorm().ReLU().Convolution(nFilter, 3);
     x.Add(bak);
     x.BatchNorm().ReLU().Convolution(1, 1).Softmax();
+
+<img alt="performance_image" src="https://user-images.githubusercontent.com/33809201/33012320-7659cb1e-ce1b-11e7-8c10-f63c56c1279d.png">
     
 ## Usage
 
@@ -58,11 +57,11 @@ https://withablink.coding.me/goPolicyNet/ : a weiqi (baduk, go) policy network i
  
 ## Todo
 - [x] Convolution (3x3_pad_1 and 1x1), BatchNorm, ReLU, Softmax
-- [ ] Webworker and async
-- [ ] Faster inference with weblas pipeline, WebGPU, WebAssembly
 - [ ] Pooling layer
 - [ ] FC layer
 - [ ] Strided convolution
 - [ ] Transposed convolution
+- [ ] Webworker and async
+- [ ] Faster inference with weblas pipeline, WebGPU, WebAssembly
 - [ ] Memory manager
 - [ ] Training
